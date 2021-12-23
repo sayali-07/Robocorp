@@ -1,7 +1,0 @@
-1639557678376	geckodriver	INFO	Listening on 127.0.0.1:61111
-1639557681390	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "c:\\Users\\sayali.jadhav.V2SOLUTIONS\\AppData\\Local\\robocorp\\temp\\4d65822107fcd70e\\rust_mozprofileKJBcdF"
-JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
-console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
-1639557685350	Marionette	INFO	Listening on port 61119
-1639557685606	Marionette	WARN	TLS certificate errors will be ignored for this session
-JavaScript error: resource://gre/modules/PartitioningExceptionListService.jsm, line 69: NS_ERROR_MALFORMED_URI: Component returned failure code: 0x804b000a (NS_ERROR_MALFORMED_URI) [nsIPartitioningExceptionListObserver.onExceptionListUpdate]
