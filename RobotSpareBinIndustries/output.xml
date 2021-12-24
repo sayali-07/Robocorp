@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.2 (Python 3.7.5 on win32)" generated="20211223 17:11:11.961" rpa="true" schemaversion="2">
+<suite id="s1" name="Tasks" source="d:\Robocorp\Usecase_Certification2\RobotSpareBinIndustries\tasks.robot">
+<test id="s1-t1" name="Template robot main suite.">
+<kw name="Download the CSV file">
+<kw name="Add heading" library="RPA.Dialogs">
+<arg>Download the CSV File</arg>
+<doc>Add a centered heading text element</doc>
+<status status="PASS" starttime="20211223 17:11:14.268" endtime="20211223 17:11:14.269"/>
+</kw>
+<kw name="Add text input" library="RPA.Dialogs">
+<arg>name=url</arg>
+<arg>label= Enter the URL of CSV file</arg>
+<tag>input</tag>
+<doc>Add a text input element</doc>
+<status status="PASS" starttime="20211223 17:11:14.269" endtime="20211223 17:11:14.269"/>
+</kw>
+<kw name="Show dialog" library="RPA.Dialogs">
+<var>${dialog}</var>
+<arg>title=Input form</arg>
+<tag>dialog</tag>
+<doc>Create a new dialog with all the defined elements, and show
+it to the user. Does not block, but instead immediately returns
+a new ``Dialog`` instance.</doc>
+<msg timestamp="20211223 17:11:14.277" level="INFO">${dialog} = &lt;RPA.Dialogs.dialog.Dialog object at 0x000001FAFB1D1A48&gt;</msg>
+<status status="PASS" starttime="20211223 17:11:14.270" endtime="20211223 17:11:14.277"/>
+</kw>
+<kw name="Wait dialog" library="RPA.Dialogs">
+<var>${result}</var>
+<arg>${dialog}</arg>
+<tag>dialog</tag>
+<doc>Wait for a dialog to complete that has been created with the
+keyword ``Show dialog``.</doc>
+<msg timestamp="20211223 17:11:14.277" level="INFO">Protecting keyword: RPA.Dialogs.Wait dialog</msg>
+<msg timestamp="20211223 17:11:27.454" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="FAIL" starttime="20211223 17:11:14.277" endtime="20211223 17:11:27.453"/>
+</kw>
+<kw name="Download" library="RPA.HTTP">
+<arg>${result.url}</arg>
+<doc>An alias for the ``HTTP Get`` keyword.</doc>
+<status status="NOT RUN" starttime="20211223 17:11:27.454" endtime="20211223 17:11:27.454"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${result.url}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20211223 17:11:27.455" endtime="20211223 17:11:27.455"/>
+</kw>
+<status status="FAIL" starttime="20211223 17:11:14.268" endtime="20211223 17:11:27.456"/>
+</kw>
+<kw name="Open the website and Login">
+<status status="NOT RUN" starttime="20211223 17:11:27.457" endtime="20211223 17:11:27.457"/>
+</kw>
+<kw name="Fill the form using the data from the CSV file">
+<status status="NOT RUN" starttime="20211223 17:11:27.458" endtime="20211223 17:11:27.459"/>
+</kw>
+<kw name="Close the Browser">
+<status status="NOT RUN" starttime="20211223 17:11:27.460" endtime="20211223 17:11:27.461"/>
+</kw>
+<status status="FAIL" starttime="20211223 17:11:14.267" endtime="20211223 17:11:27.463">Aborted by user</status>
+</test>
+<doc>Download the Order file (.csv).
+save each order HTML receipt as a PDF file.
+save a screenshot of each of the ordered robots.
+embed the screenshot of the robot to the PDF receipt.
+create a ZIP archive of the PDF receipts. Store the archive in the output directory.</doc>
+<status status="FAIL" starttime="20211223 17:11:11.965" endtime="20211223 17:11:27.466"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tasks</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Tasks">Tasks</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
